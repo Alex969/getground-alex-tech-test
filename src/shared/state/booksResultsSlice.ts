@@ -1,22 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { BookState } from "../../components/BookList/types";
 import { fetchBooks } from "../../services/api";
 
-export interface BookState {
-    books: BookType[];
-    loading: boolean;
-    error: any;
-};
-
-export interface BookType {
-    book_author: string[];
-    book_publication_city: string;
-    book_publication_country: string;
-    book_publication_year: string;
-    book_pages: number;
-    book_title: string;
-    id: number;
-};
-
+// Define a type for the slice state
 const initialState: BookState = {
     books: [],
     loading: false,
