@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { useAppDispatch } from "../../shared/state/hooks";
 import { fetchBooks } from "../../services/api";
-import { useParams } from "react-router-dom";
 import { Button, TextField } from "@mui/material";
 
 
 const SearchField = () => {
     const [searchQuery, setSearchQuery] = useState('');
     const dispatch = useAppDispatch();
-    const { page } = useParams<{ page: string }>();
 
     const handleSearchFilter = () => {
         const filters = searchQuery
