@@ -15,7 +15,7 @@ const SearchField = () => {
             ? [{ type: 'all', values: [searchQuery] }]
             : [];
 
-        dispatch(fetchBooks({ page: parseInt(page || '', 10), itemsPerPage: 20, filters }));
+        dispatch(fetchBooks({ page: 1, itemsPerPage: 20, filters }));
         };
 
 
